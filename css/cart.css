@@ -1,0 +1,113 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: aliceblue;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo on the left */
+.logo {
+  flex: 0 0 auto;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Search bar centered */
+.search-container {
+  flex: 1;
+  margin: 0 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Icons aligned right */
+.nav-icons {
+  flex: 0 0 auto;
+}
+
+.nav-icons a {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-icons a:hover {
+  text-decoration: underline;
+}
+
+/* Cart container */
+main {
+  margin-top: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.cart-item img {
+  border-radius: 8px;
+}
+
+.clear-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: darkred;
+}

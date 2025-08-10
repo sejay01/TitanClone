@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: aliceblue;
+  background-color: whitesmoke;
 }
 
 .header{
-  background-color: aliceblue;
+  background-color: whitesmoke;
 }
 
 body {
@@ -23,8 +23,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: aliceblue;
-  border-bottom: 1px aliceblue;
+  background-color: whitesmoke;
+  border-bottom: 1px whitesmoke;
 }
 
 .logo {

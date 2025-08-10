@@ -19,16 +19,62 @@
           <a href="about.html"><span>About us</span></a>
         </div>
       </header>
-  </div>]
-
- <div class="slideshow">
-  <div class="slides">
-    
-    <img class="watchimg" src="images/watch2.jpg" alt="Image 2" width="" height=""/>
-    <img class="watchimg" src="images/watch1.jpg" alt="Image 1" />
-    
   </div>
-</div>
+
+  <div class="watchcontainer">
+    <div>
+      <img class="watch" src="images/watch1.jpg" alt="">
+      <h4 class="watch-name">Titan</h4>
+      <p class="price">2,999</p>
+      <button class="cart-btn">Add to cart</button>
+    </div>
+    <div>
+      <img class="watch" src="images/watch2.jpg" alt="">
+      <h4 class="watch-name">Fastrack</h4>
+      <p class="price">2,499</p>
+      <button class="cart-btn">Add to cart</button>
+    </div>
+    <div>
+      <img class="watch" src="images/watch3.jpg" alt="">
+      <h4 class="watch-name">Casio</h4>
+      <p class="price">4,000</p>
+      <button class="cart-btn">Add to cart</button>
+    </div>
+    <div>
+      <img class="watch" src="images/watch4.jpg" alt="">
+      <h4 class="watch-name">Fossil</h4>
+      <p class="price">7,999</p>
+      <button class="cart-btn">Add to cart</button>
+    </div>
+    <div>
+      <img class="watch" src="images/watch5.jpg" alt="">
+      <h4 class="watch-name">Timex</h4>
+      <p class="price">3,399</p>
+      <button class="cart-btn">Add to cart</button>
+    </div>
+
+  </div>
+  
+  <script>
+  const buttons = document.querySelectorAll(".cart-btn");
+
+  buttons.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      const watch = btn.parentElement;
+      const name = watch.querySelector(".watch-name").textContent;
+      const price = watch.querySelector(".price").textContent;
+      const image = watch.querySelector(".watch").getAttribute("src");
+
+      const item = { name, price, image };
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      alert(`${name} added to cart!`);
+    });
+  });
+</script>
 
 </body>
 </html>
